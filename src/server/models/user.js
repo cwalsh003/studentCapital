@@ -20,10 +20,22 @@ var User = new Schema({
         {
             productID: String,
             name: String,
-            token: String,
+            Type: String,
             time: { type: Date, default: Date.now }
         }
     ],
+    gpa: {
+        type: Number,
+        default: 4.0
+    },
+    numSemesters: {
+        type: Number,
+        default: 1
+    },
+    maxSemesters: {
+        type: Number,
+        default: 8
+    },
     password: {
         type: String,
         required: true
@@ -35,6 +47,10 @@ var User = new Schema({
     userType: {
         type: String,
         default: 'User'
+    },
+    accountId: {
+        type: String,
+        default: '58e91ac4a73e4942cdafd320'
     }
 });
 

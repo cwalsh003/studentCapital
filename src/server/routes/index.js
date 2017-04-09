@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-
+var request = require('superagent');
 
 router.get('/', function(req, res, next) {
   res.render('index', {
@@ -32,10 +32,19 @@ router.get('/save', function(req, res, next) {
   });
 });
 router.get('/spending', function(req, res, next) {
-  res.render('courses', {
-    user: req.user,
-    message: req.flash('message')[0]
-  });
+
+    //http://api.reimaginebanking.com/accounts/58e91ac4a73e4942cdafd320/purchases?key=7132364e9e0585daf0e649dff3774062
+    var path = 'http://api.reimaginebanking.com/accounts/58e91ac4a73e4942cdafd320/purchases?key=7132364e9e0585daf0e649dff3774062';
+    request.get('http://api.reimaginebanking.com/accounts/58e91ac4a73e4942cdafd320/purchases?key=7132364e9e0585daf0e649dff3774062').end(function(err, data){
+        console.log(err);
+        console.log(data.body); //do something
+        res.render('profile', {
+            user: req.user,
+            data: data.body,
+            message: req.flash('message')[0]
+        });
+    });
+
 });
 
 
