@@ -20,7 +20,7 @@
 @import "accordions";
 
 .pattern-bg{
-    background: url('../../src/client/images/pattern.png') repeat;
+    background: url('/images/pattern.png') repeat;
     padding:60px 0;
     .center-heading{
         h2,p{
@@ -36,7 +36,7 @@
 }
 
 .other-info{
-    background:url('../../src/client/images/pattern-2.png') repeat left top scroll #FFF;
+    background:url('/images/pattern-2.png') repeat left top scroll #FFF;
     h4{
         text-transform: uppercase;
         font-weight: 700;
@@ -103,7 +103,7 @@
     }
 }
 .newsletter-section{
-    background:url('../../src/client/images/pattern-2.png') repeat left top scroll #FFF;
+    background:url('/images/pattern-2.png') repeat left top scroll #FFF;
     padding: 80px 0;
     form{
         text-align: center;
@@ -117,7 +117,7 @@
     }
 }
 .intro-video-section{
-    background:url('../../src/client/images/pattern-2.png') repeat left top scroll #FFF;
+    background:url('/images/pattern-2.png') repeat left top scroll #FFF;
     padding: 80px 0;
     h1{
         font-size: 50px;
@@ -137,7 +137,7 @@
     }
 }
 .video-bg-section{
-    background-image: url('../../src/client/images/poster.png');
+    background-image: url('/images/poster.png');
     background-repeat: no-repeat;
     position: relative;
     overflow: hidden;

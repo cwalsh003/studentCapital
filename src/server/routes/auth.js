@@ -41,7 +41,7 @@ router.post('/register', function(req, res, next) {
                         status: 'success',
                         value: 'Successfully registered (and logged in).'
                     });
-                    return res.redirect('/');
+                    return res.redirect('/overview');
                 });
             }
         });
@@ -76,7 +76,7 @@ router.post('/login', function(req, res, next) {
         status: 'success',
         value: 'Welcome!'
       });
-      return res.redirect('/');
+      return res.redirect('/overview');
     });
   })(req, res, next);
 });

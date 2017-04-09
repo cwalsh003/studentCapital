@@ -6,7 +6,7 @@ var helpers = require('../lib/helpers');
 var User = require('../models/user');
 
 router.get('/', function(req, res, next) {
-  res.render('index', {
+  res.render('landingPage', {
     user: req.user,
     message: req.flash('message')[0]
   });

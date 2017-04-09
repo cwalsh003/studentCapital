@@ -12,10 +12,14 @@ $(document).ready(function () {
     function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
     }
+    var x = document.getElementById('score');
+    console.log(x.innerHTML);
 
+    // hide the lorem ipsum text
+    document.getElementById('score').style.display = 'none';
     var g = new JustGage({
         id: "gauge",
-        value: getRandomInt(0, 100),
+        value: parseInt(x.innerHTML),
         min: 0,
         max: 100,
         title: "Student Credit Score",
@@ -95,10 +99,7 @@ $(".search-toggle a").click(function(){
     }
 });
 
-    setInterval(function() {
-        g.refresh(getRandomInt(0, 100));
 
-    }, 1000);
     //courses carousel
     $(".testi-slider").owlCarousel({
     loop:true,
