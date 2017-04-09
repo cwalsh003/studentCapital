@@ -40,6 +40,10 @@ var User = new Schema({
         type: String,
         required: true
     },
+    score: {
+        type: Number,
+        default: 50
+    },
     admin: {
         type: Boolean,
         default: false
