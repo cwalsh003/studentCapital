@@ -7,25 +7,35 @@
 var app = require('../app');
 var debug = require('debug')('express4:server');
 var http = require('http');
+var https = require('https');
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '443');
 app.set('port', port);
 
 /**
  * Create HTTP server.
  */
-
-var server = http.createServer(app);
+//create server and put on port 443...
+var fs = require('fs');
+var options = {
+    key: fs.readFileSync('privkey.pem'),
+    cert: fs.readFileSync('cert.pem')
+};
+//http.createServer(app).listen(80);
+var server = https.createServer(options, app);
 
 /**
  * Listen on provided port, on all network interfaces.
  */
 
 server.listen(port);
+
+
+
 server.on('error', onError);
 server.on('listening', onListening);
 
