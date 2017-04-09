@@ -44,18 +44,8 @@
 
         
         <!-- Static navbar -->
-        <nav class="navbar navbar-inverse navbar-static-top yamm">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">Student Capital</a>
-                </div>
-                <d<nav class="navbar navbar-static-top yamm">
+
+            <nav class="navbar navbar-static-top yamm">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -91,43 +81,19 @@
                 <div class="col-sm-9">
                     <div class="post">                     
                     <body>
+                    <h2 style="color: whitesmoke;">Your Savings history is great</h2>
+
+                    <p>
+                        Based on our records, your saving habits have been improving over time. This has a very positive effect of your credit worthiness.
+                    </p>
                         <div id='myChart'></div>
 
-                        <script>
-                        var chartData = {
-                          type: "line",  // Specify your chart type here.
-                          title: {
-                            text: "plz word" // Adds a title to your chart
-                          },
-                          legend: {}, // Creates an interactive legend
-                          series: [
-                                {values: [25,15,26,21,24,26,33,25,15,25,22,24]}
-                               ] };
-                        zingchart.render({ // Render Method[3]
-                          id: "myChart",
-                          data: chartData,
-                          height: 400,
-                          width: 600
-                        });
-                      </script>
+
                     </body>    
                         <!--<img src="../../img/g6.jpg" alt="" class="img-responsive"> -->
-                        <h3>Post title goes here</h3>
-                        
-                        <p>
-                            Morbi bibendum consectetuer, vulputate, sollicitudin, primis ullamcorper vulputate sed risus dis feugiat vel gravida, class enim Mus aliquam ut donec sodales bibendum rutrum dis sit rutrum id eleifend. Dapibus potenti.
-                        </p>
-                        <blockquote>
 
-                            Morbi bibendum consectetuer, vulputate, sollicitudin, primis ullamcorper vulputate sed risus dis feugiat vel gravida, class enim Mus aliquam ut donec sodales bibendum rutrum dis sit rutrum id eleifend. Dapibus potenti.
 
-                        </blockquote>
-                        <p>
-                            Morbi bibendum consectetuer, vulputate, sollicitudin, primis ullamcorper vulputate sed risus dis feugiat vel gravida, class enim Mus aliquam ut donec sodales bibendum rutrum dis sit rutrum id eleifend. Dapibus potenti.
-                        </p>
-                        <p>
-                            Morbi bibendum consectetuer, vulputate, sollicitudin, primis ullamcorper vulputate sed risus dis feugiat vel gravida, class enim Mus aliquam ut donec sodales bibendum rutrum dis sit rutrum id eleifend. Dapibus potenti.
-                        </p>
+
                     </div>
 
                 </div>
@@ -135,77 +101,23 @@
                 <!-- Right Side Bar start -->
                 <div class="col-md-3 margin-btm-40">
                     <div class="sidebar-widget">
-                        <h3>Job Openings</h3>
-                        <ul class="list-unstyled">
-                            <li><a href="#">Designer - HTML5 / CSS3</a></li>
-                            <li><a href="#">Wordpress Developer</a></li>
-                            <li><a href="#">Marketing Manager</a></li>
-                            <li><a href="#">AngularJs Master</a></li>
-                        </ul>
-                    </div><!--sidebar widget end-->
-                    <div class="sidebar-widget">
-                        <h3>Events</h3>
-                        <div class="side-event clearfix">
-                            <div class="s-event-date">
-                                <span>April 16</span>
-                                2016
-                            </div>
-                            <div class="s-event-content">
-                                <h5> <a href="#">
-                                        World online Video Tour at assan campus  
-                                    </a></h5>
-                                <p>9:AM - 1:PM</p>
-                            </div>
-                        </div><!--event end-->
-                        <div class="side-event clearfix">
-                            <div class="s-event-date">
-                                <span>April 16</span>
-                                2016
-                            </div>
-                            <div class="s-event-content">
-                                <h5> <a href="#">
-                                        World online Video Tour at assan campus  
-                                    </a></h5>
-                                <p>9:AM - 1:PM</p>
-                            </div>
-                        </div><!--event end-->
-                        <div class="side-event clearfix">
-                            <div class="s-event-date">
-                                <span>April 16</span>
-                                2016
-                            </div>
-                            <div class="s-event-content">
-                                <h5> <a href="#">
-                                        World online Video Tour at assan campus  
-                                    </a></h5>
-                                <p>9:AM - 1:PM</p>
-                            </div>
-                        </div><!--event end-->
-                    </div><!--sidebar widget end-->
-                    <div class="sidebar-widget">
-                        <h3>Tag Cloud</h3>
-                        <ul class="list-inline tag-list">
-                            <li><a href="#">Courses</a></li>
-                            <li><a href="#">Design</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Marketing</a></li>
-                            <li><a href="#">AngularJs</a></li>
-                            <li><a href="#">Meteor</a></li>
-                            <li><a href="#">ReactJs</a></li>
-                            <li><a href="#">.Net</a></li>
-                            <li><a href="#">Jquery</a></li>
-                        </ul>
-                    </div><!--sidebar widget end-->
+                        <label for="buttonSSS">Click now to transfer money to your account and help your credit score now</label>
+                        <div id= 'buttonSSS' class="form-group">
+                            <label for="usr">Amount:</label>
+                            <input type="text" class="form-control" id="usr">
+                        </div>
+                        <button id="Plswork" type="submit" class="button btn">Save Now</button>
+                    </div>
+                    <!--sidebar widget end-->
+
                 </div>
             </div>
         </div>
 
         <div class="space70"></div>
         <!--footer start-->
-        <footer class="footer" id="footer">
+
            
-        </footer>
-        <!--footer end-->
         <!-- jQuery -->
         <script src="js/jquery.min.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -222,6 +134,39 @@
                 itemSelector: '.news-item',
                 columnWidth: 0
             });
+        </script>
+        <script>
+            var chartData = {
+                type: "line",  // Specify your chart type here.
+                title: {
+                    text: "Your savings" // Adds a title to your chart
+                },
+                legend: {}, // Creates an interactive legend
+                series: [
+                    {values: [10,15,26,21,24,26,33,40,55,70,90,100]}
+                ] };
+            zingchart.render({ // Render Method[3]
+                id: "myChart",
+                data: chartData,
+                height: 400,
+                width: 600
+            });
+
+            $( "#Plswork" ).click(function() {
+                console.log(10);
+                $.post('https://api.reimaginebanking.com/accounts/58e91ac4a73e4942cdafd320/deposits?key=7132364e9e0585daf0e649dff3774062',
+                        {
+                            "medium": "balance",
+                            "transaction_date": "2017-04-09",
+                            "amount": document.getElementById('buttonSSS').value,
+                            "description": "string"
+                        },
+                        function(data, status){
+                            alert("Data: " + data + "\nStatus: " + status);
+                        });
+
+            });
+
         </script>
     </body>
 </html>

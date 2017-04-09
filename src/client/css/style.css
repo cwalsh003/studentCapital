@@ -30,6 +30,9 @@ body {
     background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url(http://il3.picdn.net/shutterstock/videos/2757836/thumb/1.jpg);
     background-size: cover;
 }
+.col-sm-8.col-sm-offset-2.text-center.wow.animated.bounceIn.center {
+  position: fixed;
+}
 .banner-intro .banner-inner {
     position: relative;
     width: 100%;
