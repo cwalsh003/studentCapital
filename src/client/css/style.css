@@ -488,21 +488,32 @@ Top bar style
 /* 
     Navbar css
 */
-.navbar-inverse {
-  background-color: #d03027;
+
+.nav{
+    background-color: #d03027 !important;
+}
+.navbar {
+  background-color: #d03027 !important;
   border: 0px;
   margin: 0px;
-  padding: 0px 0;
+margin-top: 20px;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: white !important;
 }
-.navbar-inverse .navbar-nav > li > a {
-  font-family: "Open Sans", Arial, sans-serif;
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 1px;
-  color: #eee;
+.notBlack li  a{
+  background-color: #d03027 !important;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: white !important;
 }
-.navbar-inverse .navbar-nav > li > a:hover {
+
+.notBlack  li  a:hover {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.1);
 }

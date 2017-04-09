@@ -6,20 +6,28 @@ $(document).ready(function () {
 
     var g = new JustGage({
         id: "gauge",
-        value: 51,
+        value: getRandomInt(0, 100),
         min: 0,
         max: 100,
         title: "Student Credit Score",
         donut: true,
         pointer: true,
-        levelColors: ['#CE1B21', '#D0532A', '#FFC414', '#85A137'],
+        levelColors: ['#c64411', '#c6b611','#98c611','#5dc611'  ],
         levelColorsGradient: true,
         pointerOptions: {
             bottomwidth: 8,
             toplength: 10,
             bottomlength: 10
         },
-
+        startAnimationTime: 2000,
+        startAnimationType: ">",
+        refreshAnimationTime: 1000,
+        refreshAnimationType: "bounce",
+        showInnerShadow: true,
+        shadowOpacity: 1,
+        shadowSize: 5,
+        shadowVerticalOffset: 10,
+        titleFontColor: "red",
         counter:true
 
     });
@@ -59,6 +67,11 @@ $(".search-toggle a").click(function(){
         }
     }
 });
+
+    setInterval(function() {
+        g.refresh(getRandomInt(0, 100));
+
+    }, 1000);
     //courses carousel
     $(".testi-slider").owlCarousel({
     loop:true,
