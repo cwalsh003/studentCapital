@@ -120,15 +120,15 @@
 
 
         <!-- jQuery -->
-        <script src="js/jquery.min.js"></script>
-        <script src="bootstrap/js/bootstrap.min.js"></script>
-        <script src="js/wow.min.js"></script>
-        <script src="js/bootstrap-hover-dropdown.min.js"></script>
-        <script src="js/jquery.stellar.min.js"></script>
-        <script src="flexslider/jquery.flexslider-min.js"></script>
-        <script src="owl-carousel/owl.carousel.min.js"></script>
-        <script src="js/custom.js"></script>
-        <script src="js/masonry.pkgd.min.js"></script>
+        <script src="/js/jquery.min.js"></script>
+        <script src="/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/js/wow.min.js"></script>
+        <script src="/js/bootstrap-hover-dropdown.min.js"></script>
+        <script src="/js/jquery.stellar.min.js"></script>
+        <script src="/flexslider/jquery.flexslider-min.js"></script>
+        <script src="/owl-carousel/owl.carousel.min.js"></script>
+        <script src="/js/custom.js"></script>
+        <script src="/js/masonry.pkgd.min.js"></script>
         <script>
             $('.news-grid').masonry({
                 // options
@@ -159,7 +159,7 @@
                         {
                             "medium": "balance",
                             "transaction_date": "2017-04-09",
-                            "amount": document.getElementById('buttonSSS').value,
+                            "amount": parseFloat(document.getElementById('buttonSSS').value),
                             "description": "string"
                         },
                         function(data, status){
