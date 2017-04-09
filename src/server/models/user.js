@@ -42,7 +42,7 @@ var User = new Schema({
     },
     score: {
         type: Number,
-        default: 50
+        default: 84
     },
     admin: {
         type: Boolean,
@@ -65,6 +65,7 @@ User.methods.generateHash = function(password, callback) {
         }
         bcrypt.hash(password, salt, function(err, hash) {
             if (err) {
+                console.log(err);
                 return next(err);
             }
             return callback(err, hash);

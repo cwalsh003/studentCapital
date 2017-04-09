@@ -1,10 +1,149 @@
-{% extends '_base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Save Money</title>
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-{% block title %}{% endblock %}
+    <!-- Optional theme
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="/css/animate.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="owl-carousel/assets/owl.carousel.css" rel="stylesheet">
+    <link href="owl-carousel/assets/owl.theme.default.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="flexslider/flexslider.css" rel="stylesheet">
+    <!--Revolution slider css-->
+    <link href="rs-plugin/css/settings.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="/css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!--zingchart -->
+    <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
+    <script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf6d"];
+    </script>
+
+</head>
+<body>
+<div id="preloader"></div>
 
 
-{% block content %}
+<nav class="navbar navbar-harvest navbar-static-top yamm">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"><h2 style="color:whitesmoke;">Student Capital</h2></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse notBlack">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/overview">Overview</a></li>
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/save">Save Money</a></li>
+                <li> <a href="/spending">Spending Habits</a></li>
+                {% if user %}
+                <li><a href="/auth/logout">Logout</a></li>
+                {% else %}
+                <li><a href="/auth/login">Login/Register</a></li>
+                {% endif %}
+            </ul>
 
+        </div><!--/.nav-collapse -->
+    </div><!--/.container -->
+</nav><!--/nav end -->
+
+
+
+<div class="space70"></div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <div class="post">
+                <body>
+                <div id='myChart'></div>
+
+                <script>
+
+                    var chartData = {
+                        type: "bar",  // Specify your chart type here.
+                        title: {
+                            text: "Spending History" // Adds a title to your chart
+                        },
+                        legend: {}, // Creates an interactive legend
+                        series: [
+                            {values: [10, 10, 10, 1.01, 25, 17.5, 75.65, 13.76, 27.89, 34.87, 62.95, 12.93, 24, 178.45, 56.43, 9.56, 95.6, 33.54, 13.57, 56.25, 34.69, 45.83,67.41]}
+                        ] };
+                    zingchart.render({ // Render Method[3]
+                        id: "myChart",
+                        data: chartData,
+                        height: 400,
+                        width: 600
+                    });
+                </script>
+                </body>
+                <!--<img src="../../img/g6.jpg" alt="" class="img-responsive"> -->
+                <h3>Based on Spending data from Nessie:</h3>
+
+                <p>
+                    Your spending tends to follow a 7 day pattern where spending gradually increases throught the range. You on average spend $40.00 a day. We recommend normalizing your spending.
+                </p>
+                <blockquote>
+
+                    Normalizing your spending means: Don't shift your spending all onto one day. Distributing your spending will allow you more capital throughout the week, giving you the ability to buy the things you like.
+
+                </blockquote>
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="space70"></div>
+<!--footer end-->
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/bootstrap-hover-dropdown.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="flexslider/jquery.flexslider-min.js"></script>
+<script src="owl-carousel/owl.carousel.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/masonry.pkgd.min.js"></script>
+<script>
+    $('.news-grid').masonry({
+        // options
+        itemSelector: '.news-item',
+        columnWidth: 0
+    });
+</script>
+</body>
+</html>
+
+<!--
 <div class="container">
     <h1>Profile</h1>
     {% if user %}
@@ -55,6 +194,4 @@
         {% endfor %}
     </ul>
     {% endif %}
-</div>
-
-{% endblock %}
+</div>-->
