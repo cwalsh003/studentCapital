@@ -4,6 +4,14 @@
 
 $(document).ready(function () {
 
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+
     var g = new JustGage({
         id: "gauge",
         value: getRandomInt(0, 100),
@@ -17,17 +25,14 @@ $(document).ready(function () {
         pointerOptions: {
             bottomwidth: 8,
             toplength: 10,
-            bottomlength: 10
+            bottomlength: 5
         },
         startAnimationTime: 2000,
         startAnimationType: ">",
         refreshAnimationTime: 1000,
         refreshAnimationType: "bounce",
         showInnerShadow: true,
-        shadowOpacity: 1,
-        shadowSize: 5,
-        shadowVerticalOffset: 10,
-        titleFontColor: "red",
+        titleFontColor: "#3f3e3b",
         counter:true
 
     });
