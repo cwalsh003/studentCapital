@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
 var request = require('superagent');
+var passport = require('../lib/auth');
+var helpers = require('../lib/helpers');
+var User = require('../models/user');
 
 router.get('/', function(req, res, next) {
   res.render('index', {
@@ -13,19 +16,19 @@ router.get('/ping', function(req, res, next) {
   res.send("pong!");
 });
 
-router.get('/overview', function(req, res, next) {
+router.get('/overview', helpers.ensureAuthenticated, function(req, res, next) {
   res.render('index', {
     user: req.user,
     message: req.flash('message')[0]
   });
 });
-router.get('/profile', function(req, res, next) {
+router.get('/profile', helpers.ensureAuthenticated, function(req, res, next) {
   res.render('events', {
     user: req.user,
     message: req.flash('message')[0]
   });
 });
-router.get('/save', function(req, res, next) {
+router.get('/save', helpers.ensureAuthenticated, function(req, res, next) {
   res.render('post', {
     user: req.user,
     message: req.flash('message')[0]
