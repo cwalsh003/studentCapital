@@ -1,0 +1,55 @@
+/*
+Top bar style
+*/
+
+
+.top-bar{
+    border-bottom:1px solid #eee;
+    padding:6px 0;
+    span{
+        display: inline-block;
+        line-height:32px;
+        padding:0px 10px;
+        a{
+            padding: 4px 10px;
+            background-color: #f5f5f5;
+            font-size: 12px;
+            line-height: 20px;
+            font-family: $base-font;
+            font-weight: 400;
+            display: block;
+            margin-top: 3px;
+            color:$skincolor;
+            
+            &:hover{
+                color:#fff;
+                background-color:$skincolor;
+                i{
+                    color:#fff;
+                }
+            }
+            &.apply{
+             color:#fff;
+                background-color:$skincolor;  
+                 i{
+                    color:#fff;
+                }
+                 &:hover{
+                color:#fff;
+                background-color:#333;
+            }
+            }
+        }
+        i{
+            color:$skincolor;
+            margin-right: 5px;
+        }
+    }
+    &.dark{
+        background-color: #444;
+        border-bottom: 0px;
+        span{
+            color:#eee;
+        }
+    }
+}
