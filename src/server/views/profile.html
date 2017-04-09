@@ -46,12 +46,12 @@
     <p> HELLO MERCHANT. WELCOME TO YOUR PROFILE!</p>
     {% endif %}
     <br><br>
-    {% if user.products.length > 1 %}
+    {% if data.length > 1 %}
     <p>Products you've purchased:</p>
     <br>
     <ul>
-        {% for product in user.products %}
-        <li>{{ product.name }}</li>
+        {% for purchase in data %}
+        <li>{{ purchase.amount }}</li>
         {% endfor %}
     </ul>
     {% endif %}
